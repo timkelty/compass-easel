@@ -1,0 +1,18 @@
+/**
+ * WebKit/Firefox font-smoothing
+ *
+ * $value: [none, antialiased, subpixel-antialiased]
+ *
+ * http://www.usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+ * http://maxvoltar.com/archive/-webkit-font-smoothing
+ */
+
+@mixin font-smoothing($on: true) {
+  @if $on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}

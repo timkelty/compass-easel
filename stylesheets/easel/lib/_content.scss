@@ -1,0 +1,28 @@
+/**
+ * Shorthand for generated content
+ */
+
+@mixin content(
+  $selector: "&:after",
+  $content: ""
+) {
+
+  #{$selector} {
+    @if $content {
+      content: $content;
+    }
+    @content;
+  }
+}
+
+@mixin before($content: "") {
+  @include content("&:before", $content) {
+    @content;
+  }
+}
+
+@mixin after($content: "") {
+  @include content("&:after", $content) {
+    @content;
+  }
+}

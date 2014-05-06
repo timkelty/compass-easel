@@ -1,0 +1,24 @@
+/**
+ * So we don't forget focus, and tidy's up things a bit.
+ * Allows you to pass additional selectors
+ */
+
+@function hover($additional: false, $hover: true, $focus: true) {
+  $selector: ();
+
+  @if $hover {
+    $selector: append($selector, unquote("&:hover"), comma);
+  }
+
+  @if $focus {
+    $selector: append($selector, unquote("&:focus"), comma);
+  }
+
+  @if $additional {
+    @each $add in $additional {
+      $selector: append($selector, unquote($add), comma);
+    }
+  }
+
+  @return $selector;
+}

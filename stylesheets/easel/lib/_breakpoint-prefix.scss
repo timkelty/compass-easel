@@ -1,0 +1,42 @@
+/**
+ * Prefix classes per breakpoint (e.g. .v2-Grid--2col)
+ * https://github.com/suitcss/grid-layouts
+ */
+
+$breakpoint-prefix-default-map: (
+  "v1": max-width 25em,
+  "v2": 25em,
+  "v3": 50em,
+) !default;
+
+@mixin breakpoint-prefix(
+  $class,
+  $breakpoint-map: $breakpoint-prefix-default-map,
+  $include-unprefixed: true,
+  $glue: "-"
+) {
+
+  $type: str_slice($class, 0, 1);
+  $name: str_slice($class, 2);
+  $types: ".", "#", "%";
+
+  @if index($types, $type) != 1 {
+    @warn "The first parameter must begin with one of the following: #{$types}";
+  }
+
+  @if $include-unprefixed {
+    #{$type}#{$name} {
+      @content;
+    }
+  }
+
+  @each $key, $query in $class-breakpoints {
+    @if $query {
+      @include breakpoint($query) {
+        #{$type}#{$key}#{$glue}#{$name} {
+          @content;
+        }
+      }
+    }
+  }
+}

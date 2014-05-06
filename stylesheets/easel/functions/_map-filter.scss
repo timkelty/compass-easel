@@ -1,0 +1,30 @@
+/**
+ * Filter a map by values or keys
+ * @param  $map         The map you want to filter
+ * @param  $list        A list of keys or values to filter from the $map
+ * @param  $filter-by   Whether to filter by keys or values
+ */
+
+@function map-filter($map, $filter, $filter-by: value) {
+
+  $return: ();
+  $filter-by: unquote($filter-by);
+
+  @each $key, $value in $map {
+    $key-or-value: if($filter-by == key, $key, $value);
+
+    @if (index($filter, $key-or-value)) {
+      $return: map-merge($return, ($key: $value));
+    }
+  }
+
+  @return $return;
+}
+
+/**
+ * Alias to filter by key
+ */
+
+@function map-filter-key($map, $filter) {
+  @return map-filter($map, $filter, $filter-by: key);
+}
