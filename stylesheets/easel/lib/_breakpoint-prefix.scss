@@ -3,7 +3,7 @@
  * https://github.com/suitcss/grid-layouts
  */
 
-$breakpoint-prefix-default-map: (
+$breakpoint-prefix-map: (
   "v1": max-width 25em,
   "v2": 25em,
   "v3": 50em,
@@ -11,7 +11,7 @@ $breakpoint-prefix-default-map: (
 
 @mixin breakpoint-prefix(
   $class,
-  $breakpoint-map: $breakpoint-prefix-default-map,
+  $breakpoint-map: $breakpoint-prefix-map,
   $include-unprefixed: true,
   $glue: "-"
 ) {

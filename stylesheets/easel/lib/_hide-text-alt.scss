@@ -1,0 +1,16 @@
+/**
+ * Use h5bp image replacement
+ */
+
+@mixin hide-text-alt($position: before, $height: 150%) {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+
+  &:#{$position} {
+    content: "";
+    display: block;
+    width: 0;
+    height: $height;
+  }
+}

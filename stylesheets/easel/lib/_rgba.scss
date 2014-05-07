@@ -1,0 +1,9 @@
+$rgba-with-fallback: false !default;
+
+@mixin rgba($property, $color, $alpha) {
+  @if $rgba-with-fallback {
+    #{$property}: $color;
+  } @else {
+    #{$property}: rgba($color, $alpha);
+  }
+}
