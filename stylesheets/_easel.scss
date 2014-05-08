@@ -1,20 +1,25 @@
 /**
- * Mixins, functions, and variables required by our app.
+ * Easel
  */
 
-/* ==========================================================================
-   Vendor dependencies
-   ========================================================================== */
+// Config
+@import "easel/config/breakpoints";
+@import "easel/config/colors";
+@import "easel/config/compass";
+@import "easel/config/fonts";
+@import "easel/config/icons";
 
-@import "compass";
-@import "toolkit";
-@import "breakpoint";
-@import "ceaser-easing";
-@import "SassyLists";
+// Functions
+@import "easel/functions/gcd";
+@import "easel/functions/hover";
+@import "easel/functions/map-filter";
+@import "easel/functions/strip-unit";
 
-/* ==========================================================================
-   Easel
-   ========================================================================== */
-
-@import "functions/**/*";
-@import "lib/**/*";
+// The rest, mixins, etc.
+@import "easel/lib/breakpoint-prefix";
+@import "easel/lib/content";
+@import "easel/lib/font-smoothing";
+@import "easel/lib/get-sprite";
+@import "easel/lib/image-dimensions";
+@import "easel/lib/rgba";
+@import "easel/lib/state"

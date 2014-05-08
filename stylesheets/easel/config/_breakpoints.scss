@@ -1,0 +1,25 @@
+/**
+ * Breakpoint vars
+ * https://github.com/Team-Sass/breakpoint
+ */
+
+$breakpoint-no-query-fallbacks: true;
+$breakpoint-to-ems: true;
+
+/**
+ * Easel vars
+ */
+
+$breakpoints: (
+ "hidpi": min-resolution 1.5dppx,
+ "landscape": orientation landscape,
+ "portrait": orientation portrait
+) !default;
+
+$prefixed-breakpoints: (
+  "sm": max-width 30em,
+  "md": 30em,
+  "lg": 65em,
+) !default;
+
+$breakpoints: map-merge($breakpoints, $prefixed-breakpoints);

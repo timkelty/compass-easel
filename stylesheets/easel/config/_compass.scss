@@ -1,0 +1,29 @@
+/**
+ * Vertical rhythm
+ * http://compass-style.org/reference/compass/typography/vertical_rhythm/
+ */
+
+$base-font-size: 14px;
+$base-line-height: 22px;
+$rhythm-unit: "rem";
+
+/**
+ * Browser support
+ * http://compass-style.org/reference/compass/support/
+ */
+
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: false;
+$legacy-support-for-mozilla: false;
+$experimental-support-for-svg: false;
+$rem-with-px-fallback: false;
+
+/**
+ * Sprites
+ */
+
+// $png8-spacing: 10px;
+// $png8: sprite-map("sprites/png8/*.png");
+// $png32: sprite-map("sprites/png32/*.png");
+// $svg: sprite-map("svg/*.png");
