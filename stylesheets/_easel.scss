@@ -2,6 +2,13 @@
  * Easel
  */
 
+// Dependencies
+@import "compass";
+@import "toolkit";
+@import "breakpoint";
+@import "ceaser-easing";
+@import "SassyLists";
+
 // Config
 @import "easel/config/breakpoints";
 @import "easel/config/colors";
