@@ -16,10 +16,10 @@
 @import "easel/functions/strip-unit";
 
 // The rest, mixins, etc.
-@import "easel/lib/breakpoint-prefix";
-@import "easel/lib/content";
-@import "easel/lib/font-smoothing";
-@import "easel/lib/get-sprite";
-@import "easel/lib/image-dimensions";
-@import "easel/lib/rgba";
-@import "easel/lib/state"
+@import "easel/mixins/breakpoint-prefix";
+@import "easel/mixins/content";
+@import "easel/mixins/font-smoothing";
+@import "easel/mixins/get-sprite";
+@import "easel/mixins/image-dimensions";
+@import "easel/mixins/rgba";
+@import "easel/mixins/state"
