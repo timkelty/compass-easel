@@ -11,9 +11,9 @@ $breakpoint-to-ems: true;
  */
 
 $breakpoints: (
- "hidpi": min-resolution 1.5dppx,
- "landscape": orientation landscape,
- "portrait": orientation portrait
+  "hidpi": min-resolution 1.5dppx,
+  "landscape": orientation landscape,
+  "portrait": orientation portrait
 );
 
 $prefixed-breakpoints: (

@@ -13,10 +13,9 @@ $rem-with-px-fallback: false;
  * http://beta.compass-style.org/reference/compass/support/
  */
 
- $browser-minimum-versions: (
-   'ie': "9"
- );
-
+$browser-minimum-versions: (
+  'ie': "9"
+);
 
 /**
  * Sprites
