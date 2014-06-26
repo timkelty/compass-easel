@@ -1,6 +1,6 @@
 {
   "name": "easel",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "suit-utils-size": "~0.6.2",
     "suit-utils-position": "~0.1.0",
